@@ -1,46 +1,62 @@
 import React from "react";
 import "../styles/Sidebar.css";
+import logo from "../assets/food.png";
+import { IoIosLogOut } from "react-icons/io";
+import { IoMdHelpCircleOutline } from "react-icons/io";
+import { IoMdSettings } from "react-icons/io";
+import { SlPeople } from "react-icons/sl";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { MdOutlineDinnerDining } from "react-icons/md";
+import { BsMenuButtonWide } from "react-icons/bs";
+import { RxDashboard } from "react-icons/rx";
 
 const Sidebar = () => {
   return (
     <div className='bg-white sidebar'>
       <div className='m-2'>
         <i className='bi bi-boostrap-fill my-2'></i>
-        <span className='brand-name fs-4'>Tasty Station</span>
+        <img src={logo} style={{ width: "35px" }}></img>
+        <span className='brand-name fs-4 mx-2'>Tasty Station</span>
       </div>
       <hr className='text-dark' />
       <div className='list-group list-group-flush'>
         <a className='list-group-item py-2 my-1'>
-          <i className='bi bi-speedometer2 fs-5 me-3'></i>
-          <span className='fs-5'>Dashboard</span>
+          <RxDashboard style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Dashboard</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3'></i>
-          <span className='fs-5'>Order Line</span>
+          <BsMenuButtonWide style={{ width: "20px", height: "30px" }} />
+          <span className='fs5 mx-3'>Order Line</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3 '></i>
-          <span className='fs-5'>Manage Table</span>
+          <MdOutlineDinnerDining style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Manage Table</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3 '></i>
-          <span className='fs-5'>Manage Dishes</span>
+          <IoFastFoodOutline style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Manage Dishes</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3 '></i>
-          <span className='fs-5'>Customers</span>
+          <SlPeople style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Customers</span>
+        </a>
+        {/* BOTTOM */}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <a className='list-group-item py-2'>
+          <IoMdSettings style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Settings</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3'></i>
-          <span className='fs-5'>Settings</span>
+          <IoMdHelpCircleOutline style={{ width: "20px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Help Center</span>
         </a>
         <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3'></i>
-          <span className='fs-5'>Help Center</span>
-        </a>
-        <a className='list-group-item py-2'>
-          <i className='bi bi-house fs-5 me-3'></i>
-          <span className='fs-5'>Logout</span>
+          <IoIosLogOut style={{ width: "25px", height: "30px" }} />
+          <span className='fs-6 mx-3'>Logout</span>
         </a>
       </div>
     </div>

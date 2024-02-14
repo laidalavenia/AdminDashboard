@@ -4,6 +4,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import allMenu from "../assets/fast-food.png";
 import mieAyam from "../assets/mie-ayam.png";
+import { FaCirclePlus } from "react-icons/fa6";
+import { FaCircleMinus } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -11,6 +13,105 @@ const Home = () => {
       <Nav />
       <div className='container-fluid min-vh-100'>
         <div className='row g-3 my-2'>
+          <h4>Order Line</h4>
+          <div className='row'>
+            <div className='col-md-1'>
+              <Card
+                border='success'
+                className='my-2 py-3'
+                style={{
+                  width: "60px",
+                  height: "40px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card.Body>
+                  <Card.Title className='fs-6'>All</Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className='col-md-3'>
+              <Card
+                border='success'
+                className='my-2 py-3'
+                style={{
+                  width: "90px",
+                  height: "40px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card.Body style={{ width: "20px" }}>
+                  <Card.Title
+                    className='fs-6'
+                    style={{ width: "60px", marginLeft: "-1.5rem" }}
+                  >
+                    Dine in
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className='col-md-3'>
+              <Card
+                border='success'
+                className='my-2 py-3'
+                style={{
+                  width: "100px",
+                  height: "40px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card.Body>
+                  <Card.Title
+                    className='fs-6'
+                    style={{ width: "90px", marginLeft: "1.5rem" }}
+                  >
+                    Wait List
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className='col-md-3'>
+              <Card
+                border='success'
+                className='my-2 py-3'
+                style={{
+                  width: "100px",
+                  height: "40px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card.Body>
+                  <Card.Title
+                    className='fs-6'
+                    style={{ width: "100px", marginLeft: "1.5rem" }}
+                  >
+                    Take Away
+                  </Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className='col-md-2'>
+              <Card
+                border='success'
+                className='my-2 py-3'
+                style={{
+                  width: "90px",
+                  height: "40px",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Card.Body>
+                  <Card.Title className='fs-6'>Served</Card.Title>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+
           <div className='col-md-4 mb-3'>
             <Card style={{ width: "18rem", backgroundColor: "#B9EDDD" }}>
               <Card.Body>
@@ -32,7 +133,7 @@ const Home = () => {
             </Card>
           </div>
           <div className='col-md-4 mb-3'>
-            <Card style={{ width: "18rem", backgroundColor: "#B9EDDD" }}>
+            <Card style={{ width: "18rem", backgroundColor: "#FCAEAE" }}>
               <Card.Body>
                 <Card.Title>Order #F1245</Card.Title>
                 <Card.Text>Item: 3x</Card.Text>
@@ -43,7 +144,7 @@ const Home = () => {
                     style={{
                       borderRadius: "20px",
                     }}
-                    variant='success'
+                    variant='danger'
                   >
                     In Kitchen
                   </Button>{" "}
@@ -52,7 +153,7 @@ const Home = () => {
             </Card>
           </div>
           <div className='col-md-4 mb-3'>
-            <Card style={{ width: "18rem", backgroundColor: "#B9EDDD" }}>
+            <Card style={{ width: "18rem", backgroundColor: "#DCBFFF" }}>
               <Card.Body>
                 <Card.Title>Order #F1245</Card.Title>
                 <Card.Text>Item: 3x</Card.Text>
@@ -62,8 +163,8 @@ const Home = () => {
                     className='mx-2'
                     style={{
                       borderRadius: "20px",
+                      backgroundColor: "#A084E8",
                     }}
-                    variant='success'
                   >
                     In Kitchen
                   </Button>{" "}
@@ -154,7 +255,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* CARD MENU*/}
+        {/* CARD MENU 2*/}
         <div className='row'>
           <div className='col-md-3'>
             <Card className='my-4' style={{ width: "15rem" }}>
@@ -162,8 +263,25 @@ const Home = () => {
               <Card.Body>
                 <p className='fs-5'>Lunch</p>
                 <Card.Title>Mie Ayam</Card.Title>
-                <Card.Text>Rp15.000</Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
               </Card.Body>
             </Card>
           </div>
@@ -173,8 +291,25 @@ const Home = () => {
               <Card.Body>
                 <p className='fs-5'>Lunch</p>
                 <Card.Title>Mie Ayam</Card.Title>
-                <Card.Text>Rp15.000</Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
               </Card.Body>
             </Card>
           </div>
@@ -184,8 +319,25 @@ const Home = () => {
               <Card.Body>
                 <p className='fs-5'>Lunch</p>
                 <Card.Title>Mie Ayam</Card.Title>
-                <Card.Text>Rp15.000</Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
               </Card.Body>
             </Card>
           </div>
@@ -195,8 +347,141 @@ const Home = () => {
               <Card.Body>
                 <p className='fs-5'>Lunch</p>
                 <Card.Title>Mie Ayam</Card.Title>
-                <Card.Text>Rp15.000</Card.Text>
-                <Button variant='primary'>Go somewhere</Button>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
+
+        {/* CARD MENU 1*/}
+        <div className='row'>
+          <div className='col-md-3'>
+            <Card className='my-4' style={{ width: "15rem" }}>
+              <Card.Img variant='top' src={mieAyam} />
+              <Card.Body>
+                <p className='fs-5'>Lunch</p>
+                <Card.Title>Mie Ayam</Card.Title>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className='col-md-3'>
+            <Card className='my-4' style={{ width: "15rem" }}>
+              <Card.Img variant='top' src={mieAyam} />
+              <Card.Body>
+                <p className='fs-5'>Lunch</p>
+                <Card.Title>Mie Ayam</Card.Title>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className='col-md-3'>
+            <Card className='my-4' style={{ width: "15rem" }}>
+              <Card.Img variant='top' src={mieAyam} />
+              <Card.Body>
+                <p className='fs-5'>Lunch</p>
+                <Card.Title>Mie Ayam</Card.Title>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className='col-md-3'>
+            <Card className='my-4' style={{ width: "15rem" }}>
+              <Card.Img variant='top' src={mieAyam} />
+              <Card.Body>
+                <p className='fs-5'>Lunch</p>
+                <Card.Title>Mie Ayam</Card.Title>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <Card.Text>Rp15.000</Card.Text>
+                  </div>
+                  <div className='col-md-7'>
+                    <FaCircleMinus
+                      className='btn-pm mx-2'
+                      style={{
+                        width: "30px",
+                        height: "23px",
+                      }}
+                    />
+
+                    <FaCirclePlus
+                      className='mx-2'
+                      style={{ width: "30px", height: "23px" }}
+                    />
+                  </div>
+                </div>
               </Card.Body>
             </Card>
           </div>
