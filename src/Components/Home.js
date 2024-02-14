@@ -1,11 +1,5 @@
 import React from "react";
 import Nav from "./Nav";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import allMenu from "../assets/fast-food.png";
-import mieAyam from "../assets/mie-ayam.png";
-import { FaCirclePlus } from "react-icons/fa6";
-import { FaCircleMinus } from "react-icons/fa6";
 import OrderLine from "./OrderLine";
 import OrderCard from "./OrderCard";
 import FoodiesMenu from "./FoodiesMenu";
